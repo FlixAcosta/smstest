@@ -7,8 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label fixed>Mensaje</ion-label>
+    <ion-input type="text" [(ngModel)]="msj.txt" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Teléfono</ion-label>
+    <ion-input [(ngModel)]="msj.num" type="number"></ion-input>
+  </ion-item>
+ <button ion-button block (click) = send(msj) >ENVIAR SMS </button>
 </ion-content>
